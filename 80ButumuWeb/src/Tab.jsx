@@ -36,7 +36,7 @@ export default function Tab() {
   }
 
   return (
-    <main className='Tab'>
+    /*<main className='Tab'>
         <div className='Top'>
           <div className='Blur'/>
           <img src={Icon}/>
@@ -81,6 +81,10 @@ export default function Tab() {
               <p>物理部展とは</p>
             </motion.li>
         </ul>
+    </main>*/
+    <main className='Tab'>
+      <h1>いんむカフェ</h1>
+      <p>これは<strong>野獣先輩</strong>のカフェです</p>
     </main>
   )
 }

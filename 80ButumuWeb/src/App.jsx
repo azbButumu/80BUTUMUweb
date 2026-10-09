@@ -12,12 +12,6 @@ function App() {
     <>
       <HashRouter>
         <Tab/>
-        <Routes>
-          <Route path={PATH.HOME} element={<Home/>} />
-          <Route path={PATH.ROOM1} element={<Room1/>} />
-          <Route path={PATH.ROOM2} element={<Room2/>} />
-          <Route path={PATH.ABOUT} element={<About/>} />
-        </Routes>
       </HashRouter>
     </>
   )
