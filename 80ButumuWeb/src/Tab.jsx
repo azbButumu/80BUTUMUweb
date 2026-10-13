@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { PATH } from './assets/path';
 import { motion } from 'framer-motion';
 import Icon from '../public/Icon.png'
+import favicon from '../public/favicon.svg'
 
 export default function Tab() {
 
@@ -36,7 +37,8 @@ export default function Tab() {
   }
 
   return (
-    /*<main className='Tab'>
+    <main className='Tab'>
+       <header className='Head'>
         <div className='Top'>
           <div className='Blur'/>
           <img src={Icon}/>
@@ -46,7 +48,8 @@ export default function Tab() {
           <div id='b1'/>
           <div id='b2'/>
           <div id='b3'/>
-        </div>
+         </div>
+        </header>
         <ul className={menu ? "TabOpen" : ""}>
             <motion.li
             initial={{x:30, opacity:0}}
@@ -81,10 +84,6 @@ export default function Tab() {
               <p>物理部展とは</p>
             </motion.li>
         </ul>
-    </main>*/
-    <main className='Tab'>
-      <h1>いんむカフェ</h1>
-      <p>これは<strong>野獣先輩</strong>のカフェです</p>
     </main>
   )
 }

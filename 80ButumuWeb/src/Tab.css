@@ -16,13 +16,19 @@
     margin: auto 0;
 }
 
+.Head {
+   width: 2000px;
+   height:62px;
+   background-color: rgb(255, 146, 44);
+}
+
 .Tab .Button {
     position: fixed;
     top: 0;
     right: 0;
     width: 70px;
     height: 62px;
-    background-color: #FF5500;
+    background-color: #f50;
     border-bottom-left-radius: 20px;
     border-bottom: #000 1px solid;
     border-left: #000 1px solid;
@@ -92,9 +98,15 @@
 }
 
 .Tab .TabOpen {
-    width: 100vw;
+    width: 40vw;
     transition-duration: 0.4s;
-    left: 0;
+    left: 65%;
+    border: solid;
+    border-left-width: 5px;
+    border-left-color: rgb(255, 146, 44);
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
 }
 
 .Tab h3 {
