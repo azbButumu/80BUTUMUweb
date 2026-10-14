@@ -14,12 +14,13 @@
 
 .Tab .Top h2 {
     margin: auto 0;
+    position: relative;
 }
 
 .Head {
    width: 2000px;
    height:62px;
-   background-color: rgb(255, 146, 44);
+   background-color: #F50;
 }
 
 .Tab .Button {
@@ -27,7 +28,7 @@
     top: 0;
     right: 0;
     width: 70px;
-    height: 62px;
+    height: 61px;
     background-color: #f50;
     border-bottom-left-radius: 20px;
     border-bottom: #000 1px solid;
@@ -74,19 +75,21 @@
 }
 
 .Tab ul {
-    background-color: #fff;
+    background-color: #ffffff;
     width: 100vw;
     height: 100vh;
     transition-duration: 0.4s;
     list-style: none;
     position: fixed;
     left: 100vw;
-    top: 0;
+    top: 62px;
     margin: 0;
 }
 
 .Tab ul li {
     margin-top: 10px;
+    margin-left: 0px;
+    position: relative;
 }
 
 .Tab ul li:first-child {
@@ -98,15 +101,9 @@
 }
 
 .Tab .TabOpen {
-    width: 40vw;
     transition-duration: 0.4s;
-    left: 65%;
-    border: solid;
-    border-left-width: 5px;
-    border-left-color: rgb(255, 146, 44);
-    border-top-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 0px;
+    border-left-color: #f50;
+    left:60.3%;
 }
 
 .Tab h3 {
@@ -114,3 +111,11 @@
     margin: 0;
     font-family: league;
 }
+ .Tabborder{
+ }
+ .mainback{
+    transition-delay: 0.5s;
+    height: 4000px;
+    width:375px;
+    background-color: rgba(0, 0, 0, 0.30) !important;
+ }

@@ -44,6 +44,7 @@ export default function Tab() {
           <img src={Icon}/>
           <h2>物理部展</h2>
         </div>
+          <div className = {menu? "mainback":""}></div>
         <div className={menu ? "Button ButtonOpen" : "Button"} onClick={openMenu}>
           <div id='b1'/>
           <div id='b2'/>
@@ -58,6 +59,7 @@ export default function Tab() {
             onClick={Home}>
               <h3>Home</h3>
               <p>ホームに戻る</p>
+              <div className={menu? "Tabborder" : ""}></div>
             </motion.li>
             <motion.li
             initial={{x:30, opacity:0}}
