@@ -1,19 +1,14 @@
 .Tab .Top {
     display: flex;
     position: fixed;
-    top: 0;
-    left: 10px;
-}
-
-.Tab .Top img {
-    height: 62px;
-    filter: grayscale(100%);
-    object-fit: contain;
-
+    bottom: -13px;
+    right: 10px;
+    z-index: 5;
 }
 
 .Tab .Top h2 {
     margin: auto 0;
+    font-size: 50px;
 }
 
 .Tab .Button {
@@ -100,5 +95,5 @@
 .Tab h3 {
     font-size: 30px;
     margin: 0;
-    font-family: league;
+    font-family: butler;
 }

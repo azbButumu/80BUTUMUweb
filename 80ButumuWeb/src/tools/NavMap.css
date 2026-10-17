@@ -1,0 +1,43 @@
+.NavMap .Map {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+}
+
+.Flaged .Map {
+    animation: Maps 2s ease;
+}
+
+@keyframes Maps {
+    from {transform: translateX(0);}
+    10% {transform: translateX(-100vw);}
+    90% {transform: translateX(-100vw);}
+    to {transform: translateX(-200vw);}
+}
+
+.NavMap .Number {
+    font-size: 60vh;
+    font-family: league;
+    position: fixed;
+    bottom: 0;
+    right: 100vw;
+    color: white;
+    -webkit-text-stroke: #000 1px;
+    text-align: right;
+    display: block;
+}
+
+.Flaged .Number {
+    animation: Number 2s ease;
+}
+
+@keyframes Number {
+    from {transform: translate(calc(100vw - 0px),60vh);}
+    20% {transform: translate(calc(100vw - 0px),60vh);}
+    50% {transform: translate(calc(100vw - 0px),0);}
+    90% {transform: translate(calc(100vw - 0px),0);}
+    to {transform: translate(0,0);}
+}

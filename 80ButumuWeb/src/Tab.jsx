@@ -3,7 +3,6 @@ import './Tab.css'
 import { useNavigate } from 'react-router-dom';
 import { PATH } from './assets/path';
 import { motion } from 'framer-motion';
-import Icon from '../public/Icon.png'
 
 export default function Tab() {
 
@@ -36,10 +35,8 @@ export default function Tab() {
   }
 
   return (
-    /*<main className='Tab'>
+    <main className='Tab'>
         <div className='Top'>
-          <div className='Blur'/>
-          <img src={Icon}/>
           <h2>物理部展</h2>
         </div>
         <div className={menu ? "Button ButtonOpen" : "Button"} onClick={openMenu}>
@@ -81,10 +78,6 @@ export default function Tab() {
               <p>物理部展とは</p>
             </motion.li>
         </ul>
-    </main>*/
-    <main className='Tab'>
-      <h1>いんむカフェ</h1>
-      <p>これは<strong>野獣先輩</strong>のカフェです</p>
     </main>
   )
 }
