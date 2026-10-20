@@ -12,7 +12,7 @@
 }
 
 .Flaged .Map {
-    animation: Maps 3s ease;
+    animation: Maps 4s ease;
 }
 
 .NavMap .Map h2 {
@@ -25,6 +25,7 @@
 }
 
 .NavMap .Map #t0 {
+    box-shadow: 0px 0px 10px 5px #555;
     grid-column: Mc5/Mc6;
     grid-row: Mr2/Mr7;
     border: #fff 2px solid;
@@ -32,6 +33,7 @@
 }
 
 .NavMap .Map #t1 {
+    box-shadow: 0px 0px 10px 5px #555;
     grid-column: Mc3/Mc4;
     grid-row: Mr1/Mr2;
     border: #fff 2px solid;
@@ -39,6 +41,7 @@
 }
 
 .NavMap .Map #t2 {
+    box-shadow: 0px 0px 10px 5px #555;
     grid-column: Mc1/Mc2;
     grid-row: Mr1/Mr2;
     border: #fff 2px solid;
@@ -46,6 +49,7 @@
 }
 
 .NavMap .Map #t3 {
+    box-shadow: 0px 0px 10px 5px #555;
     grid-column: Mc3/Mc4;
     grid-row: Mr3/Mr4;
     border: #fff 2px solid;
@@ -53,6 +57,7 @@
 }
 
 .NavMap .Map #t4 {
+    box-shadow: 0px 0px 10px 5px #555;
     grid-column: Mc1/Mc2;
     grid-row: Mr3/Mr4;
     border: #fff 2px solid;
@@ -60,6 +65,7 @@
 }
 
 .NavMap .Map #t5 {
+    box-shadow: 0px 0px 10px 5px #555;
     grid-column: Mc3/Mc4;
     grid-row: Mr5/Mr6;
     border: #fff 2px solid;
@@ -67,6 +73,7 @@
 }
 
 .NavMap .Map #t6 {
+    box-shadow: 0px 0px 10px 5px #555;
     grid-column: Mc1/Mc2;
     grid-row: Mr5/Mr6;
     border: #fff 2px solid;
@@ -74,6 +81,7 @@
 }
 
 .NavMap .Map #t7 {
+    box-shadow: 0px 0px 10px 5px #555;
     grid-column: Mc3/Mc4;
     grid-row: Mr7/Mr8;
     border: #fff 2px solid;
@@ -81,6 +89,7 @@
 }
 
 .NavMap .Map #t8 {
+    box-shadow: 0px 0px 10px 5px #555;
     grid-column: Mc1/Mc2;
     grid-row: Mr7/Mr8;
     border: #fff 2px solid;
@@ -93,7 +102,7 @@
     border: #ff5500 2px solid;
     transform: translate(-2px,-2px);
     background: repeating-linear-gradient(45deg,#ff5500 0,#ff5500 2px,transparent 2px,transparent 10px);
-    animation: right 3s ease;
+    animation: right 4s ease;
 }
 
 .NavMap .Map .left {
@@ -102,7 +111,7 @@
     border: #ff5500 2px solid;
     transform: translate(-2px,-2px);
     background: repeating-linear-gradient(45deg,#ff5500 0,#ff5500 2px,transparent 2px,transparent 10px);
-    animation: left 3s ease;
+    animation: left 4s ease;
 }
 
 .NavMap .Map .all {
@@ -111,7 +120,7 @@
     border: #ff5500 2px solid;
     transform: translate(-2px,-2px);
     background: repeating-linear-gradient(45deg,#ff5500 0,#ff5500 2px,transparent 2px,transparent 10px);
-    animation: all 3s ease;
+    animation: all 4s ease;
 }
 
 @keyframes Maps {
@@ -156,7 +165,7 @@
 }
 
 .Flaged .Number {
-    animation: Number 3s ease;
+    animation: Number 4s ease;
 }
 
 @keyframes Number {
@@ -165,4 +174,29 @@
     50% {transform: translate(calc(100vw - 0px),0); opacity: 1;}
     90% {transform: translate(calc(100vw - 0px),0); opacity: 1;}
     to {transform: translate(0,0); opacity: 1;}
+}
+
+.NavMap .BottomMap {
+    position: fixed;
+    bottom: 0;
+}
+
+.NavMap .BottomMap .MapButton {
+    position: relative;
+    left: 20px;
+    background-color: #ff5500;
+    width: 90px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: #000 1px solid;
+    border-left: #000 1px solid;
+    border-right: #000 1px solid;
+}
+
+.NavMap .BottomMap h4 {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    margin: 10px 0;
 }

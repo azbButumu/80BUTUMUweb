@@ -8,7 +8,7 @@ export default function NavMap({PropsNav}) {
 
   useEffect(() => {
     setMapFlag(true);
-    const timer = setTimeout(() => setMapFlag(false), 3000);
+    const timer = setTimeout(() => setMapFlag(false), 4000);
     return () => clearTimeout(timer);
   }, [PropsNav])
 
@@ -26,10 +26,10 @@ export default function NavMap({PropsNav}) {
           <div className={PropsNav === 3 ? "right" : PropsNav === 4 ? "left" : ""} />  
         </div>
         <div id='t3'>
-          <div className={PropsNav === 5 ? "right" : PropsNav === 6 ? "left" : ""} />  
+          <div className={PropsNav === 8 ? "right" : PropsNav === 7 ? "left" : ""} />  
         </div>
         <div id='t4'>
-          <div className={PropsNav === 7 ? "right" : PropsNav === 8 ? "left" : ""} />  
+          <div className={PropsNav === 6 ? "right" : PropsNav === 5 ? "left" : ""} />  
         </div>
         <div id='t5'>
           <div className={PropsNav === 9 ? "right" : PropsNav === 10 ? "left" : ""} />  
@@ -48,14 +48,19 @@ export default function NavMap({PropsNav}) {
         {PropsNav}
       </div>
       <div className='BottomMap'>
-        <div id='t1'/>
-        <div id='t2'/>
-        <div id='t3'/>
-        <div id='t4'/>
-        <div id='t5'/>
-        <div id='t6'/>
-        <div id='t7'/>
-        <div id='t8'/>
+        <div className='MapButton'>
+          <h4>Map</h4>
+          <div id='m1'/>
+          <div id='m2'/>
+        </div>
+        <div id='t1' className={PropsNav === 1 ? "right" : PropsNav === 2 ? "left" : ""}/>
+        <div id='t2' className={PropsNav === 3 ? "right" : PropsNav === 4 ? "left" : ""}/>
+        <div id='t3' className={PropsNav === 8 ? "right" : PropsNav === 7 ? "left" : ""} />
+        <div id='t4' className={PropsNav === 6 ? "right" : PropsNav === 5 ? "left" : ""}/>
+        <div id='t5' className={PropsNav === 9 ? "right" : PropsNav === 10 ? "left" : ""}/>
+        <div id='t6' className={PropsNav === 11 ? "all" : ""}/>
+        <div id='t7' className={PropsNav === 11 ? "all" : ""}/>
+        <div id='t8' className={PropsNav === 11 ? "all" : ""}/>
       </div>
     </div>
   )
