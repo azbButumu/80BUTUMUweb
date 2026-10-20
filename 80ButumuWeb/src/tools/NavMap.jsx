@@ -14,6 +14,7 @@ export default function NavMap({PropsNav}) {
   return (
     <div className={MapFlag ? "NavMap Flaged" : "NavMap"}>
       <div className='Map'>
+        <div id='t0'/>
         <div id='t1'/>
         <div id='t2'/>
         <div id='t3'/>

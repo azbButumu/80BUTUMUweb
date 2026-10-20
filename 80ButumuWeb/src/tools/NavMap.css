@@ -5,10 +5,79 @@
     position: fixed;
     top: 0;
     left: 100vw;
+    display: grid;
+
+    grid-template-columns: [Mcl] 40px [Mc1] auto [Mc2] 20px [Mc3] auto [Mc4] 20px [Mc5] 30px [Mc6] 60px [Mcr];
+    grid-template-rows: [Mrl] 70px [Mr1] 60px [Mr2] 30px [Mr3] 60px [Mr4] 30px [Mr5] 60px [Mr6] 30px [Mr7] 60px [Mr8] auto [Mrr];
 }
 
 .Flaged .Map {
     animation: Maps 2s ease;
+}
+
+.NavMap .Map #t0 {
+    grid-column: Mc5/Mc6;
+    grid-row: Mr2/Mr7;
+    border: #fff 2px solid;
+    background: repeating-linear-gradient(45deg,#fff 0,#fff 2px,transparent 2px,transparent 10px);
+}
+
+.NavMap .Map #t1 {
+    grid-column: Mc3/Mc4;
+    grid-row: Mr1/Mr2;
+    border: #fff 2px solid;
+    background: repeating-linear-gradient(45deg,#fff 0,#fff 2px,transparent 2px,transparent 10px);
+}
+
+.NavMap .Map #t2 {
+    grid-column: Mc1/Mc2;
+    grid-row: Mr1/Mr2;
+    border: #fff 2px solid;
+    background: repeating-linear-gradient(45deg,#fff 0,#fff 2px,transparent 2px,transparent 10px);
+}
+
+.NavMap .Map #t3 {
+    grid-column: Mc3/Mc4;
+    grid-row: Mr3/Mr4;
+    border: #fff 2px solid;
+    background: repeating-linear-gradient(45deg,#fff 0,#fff 2px,transparent 2px,transparent 10px);
+}
+
+.NavMap .Map #t4 {
+    grid-column: Mc1/Mc2;
+    grid-row: Mr3/Mr4;
+    border: #fff 2px solid;
+    background: repeating-linear-gradient(45deg,#fff 0,#fff 2px,transparent 2px,transparent 10px);
+}
+
+.NavMap .Map #t5 {
+    grid-column: Mc3/Mc4;
+    grid-row: Mr5/Mr6;
+    border: #fff 2px solid;
+    background: repeating-linear-gradient(45deg,#fff 0,#fff 2px,transparent 2px,transparent 10px);
+}
+
+.NavMap .Map #t6 {
+    grid-column: Mc1/Mc2;
+    grid-row: Mr5/Mr6;
+    border: #fff 2px solid;
+    background: repeating-linear-gradient(45deg,#fff 0,#fff 2px,transparent 2px,transparent 10px);
+}
+
+.NavMap .Map #t7 {
+    z-index: 4;
+    grid-column: Mc3/Mc4;
+    grid-row: Mr7/Mr8;
+    border: #fff 2px solid;
+    background: repeating-linear-gradient(45deg,#fff 0,#fff 2px,transparent 2px,transparent 10px);
+}
+
+.NavMap .Map #t8 {
+    z-index: 4;
+    grid-column: Mc1/Mc2;
+    grid-row: Mr7/Mr8;
+    border: #fff 2px solid;
+    background: repeating-linear-gradient(45deg,#fff 0,#fff 2px,transparent 2px,transparent 10px);
 }
 
 @keyframes Maps {
@@ -28,6 +97,7 @@
     -webkit-text-stroke: #000 1px;
     text-align: right;
     display: block;
+    z-index: 3;
 }
 
 .Flaged .Number {
