@@ -1,5 +1,5 @@
 .NavMap .Map {
-    background-color: black;
+    background-color: #222;
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -8,11 +8,20 @@
     display: grid;
 
     grid-template-columns: [Mcl] 40px [Mc1] auto [Mc2] 20px [Mc3] auto [Mc4] 20px [Mc5] 30px [Mc6] 60px [Mcr];
-    grid-template-rows: [Mrl] 70px [Mr1] 60px [Mr2] 30px [Mr3] 60px [Mr4] 30px [Mr5] 60px [Mr6] 30px [Mr7] 60px [Mr8] auto [Mrr];
+    grid-template-rows: [Mrl] 100px [Mr1] 60px [Mr2] 30px [Mr3] 60px [Mr4] 30px [Mr5] 60px [Mr6] 30px [Mr7] 60px [Mr8] auto [Mrr];
 }
 
 .Flaged .Map {
-    animation: Maps 2s ease;
+    animation: Maps 3s ease;
+}
+
+.NavMap .Map h2 {
+    color: #fff;
+    font-family: league;
+    margin: 40px 0;
+    font-size: 40px;
+    grid-column: Mc1/Mc6;
+    grid-row: Mrl/Mr1;
 }
 
 .NavMap .Map #t0 {
@@ -65,7 +74,6 @@
 }
 
 .NavMap .Map #t7 {
-    z-index: 4;
     grid-column: Mc3/Mc4;
     grid-row: Mr7/Mr8;
     border: #fff 2px solid;
@@ -73,11 +81,37 @@
 }
 
 .NavMap .Map #t8 {
-    z-index: 4;
     grid-column: Mc1/Mc2;
     grid-row: Mr7/Mr8;
     border: #fff 2px solid;
     background: repeating-linear-gradient(45deg,#fff 0,#fff 2px,transparent 2px,transparent 10px);
+}
+
+.NavMap .Map .right {
+    width: 100%;
+    height: 100%;
+    border: #ff5500 2px solid;
+    transform: translate(-2px,-2px);
+    background: repeating-linear-gradient(45deg,#ff5500 0,#ff5500 2px,transparent 2px,transparent 10px);
+    animation: right 3s ease;
+}
+
+.NavMap .Map .left {
+    width: 100%;
+    height: 100%;
+    border: #ff5500 2px solid;
+    transform: translate(-2px,-2px);
+    background: repeating-linear-gradient(45deg,#ff5500 0,#ff5500 2px,transparent 2px,transparent 10px);
+    animation: left 3s ease;
+}
+
+.NavMap .Map .all {
+    width: 100%;
+    height: 100%;
+    border: #ff5500 2px solid;
+    transform: translate(-2px,-2px);
+    background: repeating-linear-gradient(45deg,#ff5500 0,#ff5500 2px,transparent 2px,transparent 10px);
+    animation: all 3s ease;
 }
 
 @keyframes Maps {
@@ -87,11 +121,32 @@
     to {transform: translateX(-200vw);}
 }
 
+@keyframes right {
+    from {clip-path: inset(0 0 0 100%);}
+    20% {clip-path: inset(0 0 0 100%);}
+    50% {clip-path: inset(0 0 0 50%);}
+    to {clip-path: inset(0 0 0 50%);}
+}
+
+@keyframes left {
+    from {clip-path: inset(0 50% 0 50%);}
+    20% {clip-path: inset(0 50% 0 50%);}
+    50% {clip-path: inset(0 50% 0 0%);}
+    to {clip-path: inset(0 50% 0 0%);}
+}
+
+@keyframes all {
+    from {clip-path: inset(0 0 0 100%);}
+    20% {clip-path: inset(0 0 0 100%);}
+    50% {clip-path: inset(0 0 0 0%);}
+    to {clip-path: inset(0 0 0 0%);}
+}
+
 .NavMap .Number {
     font-size: 60vh;
     font-family: league;
     position: fixed;
-    bottom: 0;
+    bottom: -10vh;
     right: 100vw;
     color: white;
     -webkit-text-stroke: #000 1px;
@@ -101,13 +156,13 @@
 }
 
 .Flaged .Number {
-    animation: Number 2s ease;
+    animation: Number 3s ease;
 }
 
 @keyframes Number {
-    from {transform: translate(calc(100vw - 0px),60vh);}
-    20% {transform: translate(calc(100vw - 0px),60vh);}
-    50% {transform: translate(calc(100vw - 0px),0);}
-    90% {transform: translate(calc(100vw - 0px),0);}
-    to {transform: translate(0,0);}
+    from {transform: translate(calc(100vw - 0px),20vh); opacity: 0;}
+    20% {transform: translate(calc(100vw - 0px),20vh); opacity: 0;}
+    50% {transform: translate(calc(100vw - 0px),0); opacity: 1;}
+    90% {transform: translate(calc(100vw - 0px),0); opacity: 1;}
+    to {transform: translate(0,0); opacity: 1;}
 }
