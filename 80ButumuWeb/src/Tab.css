@@ -20,7 +20,9 @@
 .Head {
    width: 2000px;
    height:62px;
-   background-color: #F50;
+   background-color: rgb(255, 85, 0);
+   position: sticky;
+   top:0px;
 }
 
 .Tab .Button {
@@ -29,7 +31,7 @@
     right: 0;
     width: 70px;
     height: 61px;
-    background-color: #f50;
+    background-color: rgb(255, 85, 0);
     border-bottom-left-radius: 20px;
     border-bottom: #000 1px solid;
     border-left: #000 1px solid;
@@ -83,6 +85,7 @@
     position: fixed;
     left: 100vw;
     top: 62px;
+    width:100%;
     margin: 0;
 }
 
@@ -102,7 +105,6 @@
 
 .Tab .TabOpen {
     transition-duration: 0.4s;
-    border-left-color: #f50;
     left:60.3%;
 }
 
@@ -110,12 +112,20 @@
     font-size: 30px;
     margin: 0;
     font-family: league;
+    border-left-style: ridge;
+    border-width:8px;
 }
- .Tabborder{
- }
+
  .mainback{
-    transition-delay: 0.5s;
     height: 4000px;
-    width:375px;
-    background-color: rgba(0, 0, 0, 0.30) !important;
+    width:1000px;
+    left:0%;
+    animation-name: "backgroundalpha";
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    position: fixed;
+ }
+ @keyframes backgroundalpha {
+    0%{background-color: #00000000 }
+    100%{background-color: #0000005d }
  }
