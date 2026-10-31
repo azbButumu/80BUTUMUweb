@@ -1,19 +1,14 @@
 .Tab .Top {
     display: flex;
     position: fixed;
-    top: 0;
-    left: 10px;
-}
-
-.Tab .Top img {
-    height: 62px;
-    filter: grayscale(100%);
-    object-fit: contain;
-
+    bottom: -13px;
+    right: 20px;
+    z-index: 5;
 }
 
 .Tab .Top h2 {
     margin: auto 0;
+<<<<<<< HEAD
     position: relative;
 }
 
@@ -23,6 +18,9 @@
    background-color: rgb(255, 85, 0);
    position: sticky;
    top:0px;
+=======
+    font-size: 50px;
+>>>>>>> 2077ae7749f9fc92cd76b08a2f85c3fd678d1897
 }
 
 .Tab .Button {
@@ -111,6 +109,7 @@
 .Tab h3 {
     font-size: 30px;
     margin: 0;
+<<<<<<< HEAD
     font-family: league;
     border-left-style: ridge;
     border-width:8px;
@@ -129,3 +128,7 @@
     0%{background-color: #00000000 }
     100%{background-color: #0000005d }
  }
+=======
+    font-family: butler;
+}
+>>>>>>> 2077ae7749f9fc92cd76b08a2f85c3fd678d1897

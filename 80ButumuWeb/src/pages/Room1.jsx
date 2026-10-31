@@ -1,10 +1,21 @@
+
 import './Room1.css'
+
+import { useState } from "react"
+import NavMap from "../tools/NavMap"
 
 export default function Room1() {
 
-  return(
-    <div className="main">
-      <p>Room1</p>
+  const [test,settest] = useState(1); 
+
+  const map = () => {
+    settest(test + 1)
+  }
+
+  return (
+    <div>
+      <h2 onClick={map}>aaaaa</h2>
+      <NavMap PropsNav={test}/>
     </div>
-  );
+  )
 }

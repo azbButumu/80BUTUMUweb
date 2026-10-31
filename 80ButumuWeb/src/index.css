@@ -1,7 +1,12 @@
 
 @font-face {
-    font-family: league;
+    font-family: butler;
     src: url('/src/assets/Butler-Free-Bd.woff2');
+}
+
+@font-face {
+    font-family: league;
+    src: url('/src/assets/LeagueGothic-Regular-VariableFont_wdth.ttf');
 }
 
 h1 {
