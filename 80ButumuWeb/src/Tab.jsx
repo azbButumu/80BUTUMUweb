@@ -3,11 +3,9 @@ import './Tab.css'
 import { useNavigate } from 'react-router-dom';
 import { PATH } from './assets/path.js';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
+
 import Icon from '../public/Icon.png';
 import R1 from './pages/Room1.jsx';
-=======
->>>>>>> 2077ae7749f9fc92cd76b08a2f85c3fd678d1897
 
 export default function Tab() {
 
@@ -45,13 +43,8 @@ export default function Tab() {
 
   return (
     <main className='Tab'>
-<<<<<<< HEAD
-          <div className ='Head'>
-=======
->>>>>>> 2077ae7749f9fc92cd76b08a2f85c3fd678d1897
         <div className='Top'>
           <h2>物理部展</h2>
-          </div>
         </div>
         <div className={menu ? "Button ButtonOpen" : "Button"} onClick={openMenu}>
           <div id='b1'/>

@@ -3,24 +3,13 @@
     position: fixed;
     bottom: -13px;
     right: 20px;
-    z-index: 5;
+    z-index: 6;
 }
 
 .Tab .Top h2 {
     margin: auto 0;
-<<<<<<< HEAD
     position: relative;
-}
-
-.Head {
-   width: 2000px;
-   height:62px;
-   background-color: rgb(255, 85, 0);
-   position: sticky;
-   top:0px;
-=======
-    font-size: 50px;
->>>>>>> 2077ae7749f9fc92cd76b08a2f85c3fd678d1897
+    font-size: 40px;
 }
 
 .Tab .Button {
@@ -33,7 +22,7 @@
     border-bottom-left-radius: 20px;
     border-bottom: #000 1px solid;
     border-left: #000 1px solid;
-    z-index: 5;
+    z-index: 6;
 }
 
 .Tab .Button > div {
@@ -82,9 +71,9 @@
     list-style: none;
     position: fixed;
     left: 100vw;
-    top: 62px;
-    width:100%;
+    top: 0;
     margin: 0;
+    z-index: 5;
 }
 
 .Tab ul li {
@@ -103,32 +92,29 @@
 
 .Tab .TabOpen {
     transition-duration: 0.4s;
-    left:60.3%;
+    left:0vw;
 }
 
 .Tab h3 {
     font-size: 30px;
     margin: 0;
-<<<<<<< HEAD
-    font-family: league;
-    border-left-style: ridge;
-    border-width:8px;
-}
-
- .mainback{
-    height: 4000px;
-    width:1000px;
-    left:0%;
-    animation-name: "backgroundalpha";
-    animation-duration: 0.7s;
-    animation-fill-mode: forwards;
-    position: fixed;
- }
- @keyframes backgroundalpha {
-    0%{background-color: #00000000 }
-    100%{background-color: #0000005d }
- }
-=======
     font-family: butler;
 }
->>>>>>> 2077ae7749f9fc92cd76b08a2f85c3fd678d1897
+
+.mainback{
+   height: 100%;
+   width:100%;
+   left:0%;
+   top: 0;
+   animation-name: "backgroundalpha";
+   animation-duration: 0.7s;
+   animation-fill-mode: forwards;
+   position: fixed;
+}
+
+@keyframes backgroundalpha {
+   0%{background-color: #00000000 }
+   100%{background-color: #0000005d }
+}
+    
+

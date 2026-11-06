@@ -1,0 +1,77 @@
+.image{
+    position: sticky;
+    top:0vh;
+}
+.imageA{
+    top:-4vh;
+    height: 90vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 4;
+    animation: disappeare 20s infinite;
+    opacity: 0.0;
+}
+.imageB{
+    top:-4vh;
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    z-index: 4;
+    animation: disappeare 20s 6s infinite;
+    opacity: 0.0;
+}
+.imageC{
+    top:-4vh;
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    z-index: 4;
+    animation: disappeare 20s 11s infinite;
+    opacity: 0.0;
+}
+.imageD{
+    top:-4vh;
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    z-index: 4;
+    animation: disappeare 20s 16s infinite;
+    opacity: 0.0;
+}
+.about h1 {
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    animation: titl 1s 1s ease-out both;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.about h2{
+    font-size: 7vh;
+    position: relative;
+    text-align: center;
+    top: 80vh;
+    z-index: 1;
+}
+
+.about p{
+    text-align: center;
+    position: relative;
+    top: 90vh;
+    z-index: 1;
+    background-color: #F50;
+}
+
+@keyframes disappeare {
+    from{opacity: 0.0;}
+    10%{opacity: 0.9;}
+    30%{opacity: 0.9;}
+    35%{opacity: 0.0;}
+    to{opacity: 0.0;}
+}
+
+@keyframes titl {
+    from{top: 70vh; color: rgba(255, 85, 0, 0.007);}
+    to{top: 65vh; color: #F50;}
+}

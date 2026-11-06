@@ -16,7 +16,7 @@ function App() {
     <div>
         <Tab/>
         <Routes>
-<<<<<<< HEAD
+
         <Route path='/Room1.jsx' element={<Room1 />} />
         <Route path='/' element={<Home />} />
         <Route path='/Room2.jsx' element={<Room2 />} />
@@ -24,16 +24,6 @@ function App() {
         <Route path='/Home.jsx' element={<Home />} />
         </Routes>
     </div>
-=======
-          <Route path={PATH.HOME} element={<Home/>}/>
-          <Route path={PATH.ROOM1} element={<Room1/>}/>
-          <Route path={PATH.ROOM2} element={<Room2/>}/>
-          <Route path={PATH.PRODUCT} element={<Product/>}/>
-          <Route path={PATH.ABOUT} element={<About/>}/>
-        </Routes>
-      </HashRouter>
-    </>
->>>>>>> 2077ae7749f9fc92cd76b08a2f85c3fd678d1897
   )
 }
 
