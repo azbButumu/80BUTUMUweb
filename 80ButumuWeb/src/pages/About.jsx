@@ -1,10 +1,16 @@
 import { useEffect, useState } from 'react';
 import './About.css'
 import  '/Icon.png'
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function About() {
+  const {scrollY} = useScroll();
 
+  const color = useTransform(
+     scrollY,
+     [0,1],
+     ["rgb(54, 171, 40)","rgb(241, 171, 40)"]
+  );
   
 
   return (
@@ -17,10 +23,11 @@ export default function About() {
           </div>
           <h1>物理部無線班</h1>
            <motion.h2
-               initial={{opacity:0.0}}
-               whileInView={{opacity:1.0}}
-               viewport={{once:false}}
-               transition={{ease:"easeOut"}}>物理部無線班とは</motion.h2>
+               className='titlemotion'
+               style={{
+                color,
+              }}
+               >物理部無線班とは</motion.h2>
            <p>あああああああああああああああああ</p>
            <p>あああああああああああああああああ</p>
            <p>あああああああああああああああああ</p>
