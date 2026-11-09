@@ -1,5 +1,5 @@
 .image{
-    position: sticky;
+    position: relative;
     top:4vh;
 }
 .imageA{
@@ -7,7 +7,7 @@
     height: 100vh;
     width: 100vw;
     position: absolute;
-    z-index: 4;
+    z-index: 1;
     animation: disappeare 20s infinite;
     opacity: 0.0;
 }
@@ -16,7 +16,7 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
-    z-index: 4;
+    z-index: 1;
     animation: disappeare 20s 6s infinite;
     opacity: 0.0;
 }
@@ -25,7 +25,7 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
-    z-index: 4;
+    z-index: 1;
     animation: disappeare 20s 11s infinite;
     opacity: 0.0;
 }
@@ -34,7 +34,7 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
-    z-index: 4;
+    z-index: 1;
     animation: disappeare 20s 16s infinite;
     opacity: 0.0;
 }
@@ -44,15 +44,17 @@
     z-index: 3;
     animation: titl 1s 1s ease-out both;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 6vh;
 }
 
 .about h2{
-    font-size: 7vh;
+    font-size: 4vh;
     position: relative;
     text-align: center;
-    top: 80vh;
+    top: 90vh;
     z-index: 1;
+    -webkit-background-clip: text!important;
+    background-clip: text!important;             
 }
 
 .about p{
@@ -60,7 +62,7 @@
     position: relative;
     top: 90vh;
     z-index: 1;
-    background-color: #F50;
+    color:#F50;
 }
 
 @keyframes disappeare {
