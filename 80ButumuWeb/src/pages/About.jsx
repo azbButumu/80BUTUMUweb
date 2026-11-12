@@ -1,39 +1,26 @@
-import { useEffect, useState } from 'react';
 import './About.css'
-import  '/Icon.png'
-import { AnimatePresence, degrees, motion, useMotionTemplate, useScroll, useTransform } from 'framer-motion';
-import { image, linearGradient } from 'framer-motion/client';
-
+import { useInView } from 'react-intersection-observer';
 export default function About() {
-  const {scrollYProgress} = useScroll();
 
-  const color = useTransform(scrollYProgress,[0,1], ["#000000","#ffffff"]);
-  const color2 = useTransform( scrollYProgress,[0,1],["#000000","#ffffff"]);
-  const color3 = useTransform( scrollYProgress,[0,1],["#ffffff","#000000"]);
-  const gradienter = useMotionTemplate`linear-gradient(120deg, ${color} 0%, ${color3} 50%,${color2} 100%)`;
-  
+  const {ref:ref ,inView:inView} = useInView({
+      triggerOnce:true,
+      rootMargin:'-1% 0px -25% 0px',
+  });
+  const {ref:refre ,inView:inViewre} = useInView({
+      rootMargin:'-1% 0px -25% 0px',
+  });
 
   return (
     <div className='about'>
-      <div className='image'>
+      <div className={inViewre ? 'fadeImage':'image' }>
            <img alt="画像" src = "image1.jpeg" className='imageA'></img>
            <img alt="仮画像" src = "IMG_2014.jpeg" className='imageB'></img>
            <img alt="画像" src = "image1.jpeg" className='imageC'></img>
            <img alt="仮画像" src = "IMG_2014.jpeg" className='imageD'></img>
           </div>
           <h1>物理部無線班</h1>
-           <AnimatePresence>
-           <motion.h2
-             /*  className='titlemotion'
-               style={{
-                background:gradienter,
-                WebkitTextFillColor:'transparent',
-                color:'transparent',      
-               }}  */
-            initial={{opacity:0.0}}
-            animate={{opacity:1.0}}
-            >物理部無線班とは</motion.h2>
-           </AnimatePresence>
+           <h2  className={inView ? 'h2move':'h2wait' }>物理部無線班とは</h2><div ref={refre} className={inView ? 'backh2move':'backh2' }></div>
+           <div ref={ref} className='mainone'>
            <p>あああああああああああああああああ</p>
            <p>あああああああああああああああああ</p>
            <p>あああああああああああああああああ</p>
@@ -47,6 +34,7 @@ export default function About() {
            <p>あああああああああああああああああ</p>
            <p>あああああああああああああああああ</p>
            <p>あああああああああああああああああ</p>
+           </div>
     </div>
   )
 }

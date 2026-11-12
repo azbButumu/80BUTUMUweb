@@ -1,43 +1,38 @@
-.image{
-    position: relative;
+/*.image,.fadeImage {
+    position: sticky;
     top:4vh;
+}*/
+.image{
+    position: fixed;
+    top:0vh;
+    filter: grayscale(0);
+}
+.fadeImage{
+    position: sticky;
+    top:0vh;
+    animation: back 3s ease-out forwards; 
+}
+
+.imageA,.imageB,.imageC,.imageD{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top:0vh;
+    z-index: 1;
 }
 .imageA{
-    top:-4vh;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    z-index: 1;
     animation: disappeare 20s infinite;
-    opacity: 0.0;
 }
 .imageB{
-    top:-4vh;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 1;
-    animation: disappeare 20s 6s infinite;
-    opacity: 0.0;
+    animation: disappeare 20s -6s infinite;
 }
 .imageC{
-    top:-4vh;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 1;
-    animation: disappeare 20s 11s infinite;
-    opacity: 0.0;
+    animation: disappeare 20s -11s infinite;
 }
 .imageD{
-    top:-4vh;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 1;
-    animation: disappeare 20s 16s infinite;
-    opacity: 0.0;
+    animation: disappeare 20s -16s infinite;
 }
+
 .about h1 {
     text-align: center;
     position: relative;
@@ -47,24 +42,45 @@
     font-size: 6vh;
 }
 
-.about h2{
+.h2move,.h2wait{
     font-size: 4vh;
     position: relative;
     text-align: center;
-    top: 90vh;
     z-index: 1;
-    -webkit-background-clip: text!important;
-    background-clip: text!important;             
+    color: black;       
+}
+.h2wait{
+    opacity: 0;
+}
+.h2move{
+    animation: titlh2 1s ease-out forwards;
 }
 
-.about p{
+.mainone{
     text-align: center;
     position: relative;
     top: 90vh;
     z-index: 1;
     color:#F50;
+    animation: subtitl ease-out 1;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;   
 }
 
+.backh2,.backh2move{
+    top: 84vh;
+    left:20vw;
+    height: 3vh;
+    background-color: #F50;
+    position: relative;
+}
+.backh2{
+    opacity: 0;
+}
+.backh2move{
+    animation: backh2 1s ease-out forwards;
+    opacity: 0.4;
+}
 @keyframes disappeare {
     from{opacity: 0.0;}
     10%{opacity: 0.8;}
@@ -76,4 +92,26 @@
 @keyframes titl {
     from{top: 70vh; color: rgba(255, 85, 0, 0.007);}
     to{top: 65vh; color: #F50;}
+}
+
+@keyframes subtitl{
+    from{opacity: 0;}
+    40%{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes  back{
+    from{filter: grayscale(0%);}
+    40%{filter: grayscale(100%);}
+    to{filter: grayscale(100%);}
+}
+
+@keyframes backh2 {
+    from{width: 0vw;}
+    to{width: 60vw;}
+}
+
+@keyframes titlh2 {
+    from{top:100vh;opacity: 0.0;}
+    to{opacity: 1.0; top:90vh;}
 }
