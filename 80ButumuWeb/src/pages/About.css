@@ -2,22 +2,39 @@
     position: sticky;
     top:4vh;
 }*/
+.about{
+    position: relative;
+    top:0vh;
+    right:0vw;
+    left:0vw;
+}
+
 .image{
     position: fixed;
-    top:0vh;
-    filter: grayscale(0);
+    top:-10vh;
+    height: 100vh;
+    width: 100vw;
+    left: 0vw;
+    right: 0vw;
+    z-index: 1;
 }
 .fadeImage{
-    position: sticky;
-    top:0vh;
+    position: fixed;
+    top:-10vh;
+    height: 100vh;
+    width: 100vw;
+    left: 0vw;
     animation: back 3s ease-out forwards; 
+    z-index: 1;
 }
 
 .imageA,.imageB,.imageC,.imageD{
     height: 100vh;
     width: 100vw;
-    position: fixed;
-    top:0vh;
+    position: absolute;
+    top:10vh;
+    left: 0vw;
+    right: 0vw;
     z-index: 1;
 }
 .imageA{
@@ -33,9 +50,11 @@
     animation: disappeare 20s -16s infinite;
 }
 
-.about h1 {
+.h1titl {
     text-align: center;
     position: relative;
+    left: 0vw;
+    right: 0vw;
     z-index: 3;
     animation: titl 1s 1s ease-out both;
     font-weight: bold;
@@ -45,8 +64,9 @@
 .h2move,.h2wait{
     font-size: 4vh;
     position: relative;
+    top: 100vh;
     text-align: center;
-    z-index: 1;
+    z-index: 3;
     color: black;       
 }
 .h2wait{
@@ -56,23 +76,28 @@
     animation: titlh2 1s ease-out forwards;
 }
 
-.mainone{
+.text1appeare{
     text-align: center;
     position: relative;
-    top: 90vh;
     z-index: 1;
     color:#F50;
-    animation: subtitl ease-out 1;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;   
+    will-change:opacity ;
+    z-index: 2;
+    animation: subtitl 2s ease-out  forwards;
+    top: 105vh;
+    min-height: 20vh;
 }
-
+.text1{
+    top: 105vh;
+    min-height: 20vh;
+}
 .backh2,.backh2move{
     top: 84vh;
     left:20vw;
     height: 3vh;
     background-color: #F50;
     position: relative;
+    z-index: 2;
 }
 .backh2{
     opacity: 0;
@@ -107,7 +132,7 @@
 }
 
 @keyframes backh2 {
-    from{width: 0vw;}
+    from{width: 2vw;}
     to{width: 60vw;}
 }
 
