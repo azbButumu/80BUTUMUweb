@@ -18,15 +18,12 @@ export default function Tab() {
   }
 
   const Home = () => {
-    console.log("山");
     navigation('/Home.jsx');
     setmenu(false);
   }
 
   const Room1 = () => {
-    console.log("蓬");
     navigation('/Room1.jsx');
-    console.log("来");
 
     setmenu(false);
   }

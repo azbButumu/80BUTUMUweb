@@ -76,18 +76,17 @@
     animation: titlh2 1s ease-out forwards;
 }
 
-.text1appeare{
+.text1appeare,.text2appeare{
     text-align: center;
     position: relative;
-    z-index: 1;
     color:#F50;
-    will-change:opacity ;
     z-index: 2;
     animation: subtitl 2s ease-out  forwards;
     top: 105vh;
     min-height: 20vh;
 }
 .text1{
+    position: relative;
     top: 105vh;
     min-height: 20vh;
 }
@@ -103,7 +102,7 @@
     opacity: 0;
 }
 .backh2move{
-    animation: backh2 1s ease-out forwards;
+    animation: backh2m 1s ease-out forwards;
     opacity: 0.4;
 }
 @keyframes disappeare {
@@ -131,8 +130,8 @@
     to{filter: grayscale(100%);}
 }
 
-@keyframes backh2 {
-    from{width: 2vw;}
+@keyframes backh2m {
+    from{width: 0vw;}
     to{width: 60vw;}
 }
 
