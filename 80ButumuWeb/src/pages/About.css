@@ -1,15 +1,11 @@
-/*.image,.fadeImage {
-    position: sticky;
-    top:4vh;
-}*/
+
 .about{
     position: relative;
     top:0vh;
     right:0vw;
     left:0vw;
 }
-
-.image{
+.image,.fadeImage{
     position: fixed;
     top:-10vh;
     height: 100vh;
@@ -19,15 +15,8 @@
     z-index: 1;
 }
 .fadeImage{
-    position: fixed;
-    top:-10vh;
-    height: 100vh;
-    width: 100vw;
-    left: 0vw;
     animation: back 3s ease-out forwards; 
-    z-index: 1;
 }
-
 .imageA,.imageB,.imageC,.imageD{
     height: 100vh;
     width: 100vw;
@@ -49,8 +38,31 @@
 .imageD{
     animation: disappeare 20s -16s infinite;
 }
-
-.h1titl {
+.printimage,.backgroundimage{
+    position: relative;
+    height: 35vh;
+    aspect-ratio: 3/4;
+    z-index: 2;
+}
+.printimage{
+    top:67vh;
+    right:-18vw;
+    animation: robotimage 1s ;
+}
+.backgroundimage{
+    top:33vh;
+    right:-46vw;
+    background-color: aqua;
+    animation: robotimageback 1s ;
+    z-index: 1;
+}
+.robotimage{
+    top:20vh;
+    position: relative;
+    height: 35vh;
+    left:-18vw;
+}
+.h1titl,.h1titl2 {
     text-align: center;
     position: relative;
     left: 0vw;
@@ -76,21 +88,37 @@
     animation: titlh2 1s ease-out forwards;
 }
 
-.text1appeare{
+.text1appeare,.text2appeare,.text3appeare{
     text-align: center;
+    line-height: 1.5;
     position: relative;
-    color:#F50;
+    color:rgb(0, 0, 0);
     z-index: 2;
-    animation: subtitl 2s ease-out  forwards;
-    top: 105vh;
-    min-height: 20vh;
-    height: 50vh;
-    width: 75vw;
+    font-weight: 700;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -20%;
+    text-decoration: underline rgba(255, 98, 19, 0.7) solid 40%;
+    animation: subtitl 1s ease-out  forwards;
+    text-shadow: 0.1em 0.1em rgb(90, 74, 56);
+}
+.text1appeare{
+    top:90vh;
+
     left:12.5vw;
+    width: 75vw;
+    height: 50vh;
+}
+.text2{
+    font-size: 2vh;
+    position: relative;
+    word-break: break-all;
+    width: 40vw;
+    height: 50vh;
+    left:3vw;
 }
 .text1{
     position: relative;
-    top: 105vh;
+    top: 90vh;
     min-height: 20vh;
 }
 .backh2,.backh2move{
@@ -141,4 +169,14 @@
 @keyframes titlh2 {
     from{top:100vh;opacity: 0.0;}
     to{opacity: 1.0; top:90vh;}
+}
+@keyframes robotimage {
+    from{rotate:40deg;right:-10vw;}
+    80%{rotate:1deg;}
+    to{rotate: 0deg;right:-18vw;}
+}
+@keyframes robotimageback {
+    from{rotate:40deg;right:-38vw;}
+    80%{rotate:1deg;}
+    to{rotate: 0deg;right:-46vw;}
 }
