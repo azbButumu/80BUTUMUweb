@@ -15,9 +15,6 @@ export default function About() {
   const {ref:refre ,inView:inViewre} = useInView({
       rootMargin:'-65% 0px 0% 0px',
   });
-  const {ref:ref3 ,inView:inView3} = useInView({
-      rootMargin:'-65% 0px 0% 0px',
-  });
   console.log(inView);
   return (
     <div className='about'>
@@ -26,8 +23,9 @@ export default function About() {
            <img alt="仮画像" src = "IMG_2014.jpeg" className='imageB'></img>
            <img alt="画像" src = "image1.jpeg" className='imageC'></img>
            <img alt="仮画像" src = "IMG_2014.jpeg" className='imageD'></img>
+           <div className={inViewre ? '':'whitefilter'} ></div>
           </div>
-          <h1 ref={refre} className='h1titl'>物理部無線班</h1><h1 className='h1titl2'>物理部無線班</h1>
+          <h1 ref={refre} className='h1titl'>物理部無線班</h1>
            <h2 className={inView ? 'h2move':'h2wait' }>物理部無線班とは</h2>{inView&&<div className={inView ? 'backh2move':'backh2' }></div>}
            <div ref={ref} className={inView ? 'text1appeare':'text1' }>
            {inView && (<>
@@ -38,7 +36,10 @@ export default function About() {
            <div className={inView2 ? 'text2appeare':'' }>
            {inView2 && (<>
            <img  src = "image1.jpeg" className='printimage' ></img><div className='backgroundimage'></div>
-           <p ref={ref3} className='text2'>{ abouttext.text2 }</p>
+           <img  src = "image1.jpeg" className='printimage1' ></img><div className='backgroundimage1'></div>
+           <img  src = "image1.jpeg" className='printimage2' ></img><div className='backgroundimage2'></div>
+           <img  src = "image1.jpeg" className='printimage3' ></img><div className='backgroundimage3'></div>
+           <p className='text2'>{ abouttext.text2 }</p>
            </>)}
            </div>
            </div>

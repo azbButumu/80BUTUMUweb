@@ -1,21 +1,30 @@
-
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&family=Zen+Maru+Gothic&display=swap');
 .about{
     position: relative;
     top:0vh;
     right:0vw;
     left:0vw;
 }
-.image,.fadeImage{
+.image,.fadeImage,.whitefilter,.filterappearence{
     position: fixed;
-    top:-10vh;
     height: 100vh;
     width: 100vw;
     left: 0vw;
     right: 0vw;
     z-index: 1;
 }
+.whitefilter{
+    top:10vh;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.0;
+    animation: filterappeare 3s forwards normal;
+}
+.image,.fadeImage{
+    top:-10vh;
+}
 .fadeImage{
     animation: back 3s ease-out forwards; 
+
 }
 .imageA,.imageB,.imageC,.imageD{
     height: 100vh;
@@ -38,7 +47,7 @@
 .imageD{
     animation: disappeare 20s -16s infinite;
 }
-.printimage,.backgroundimage{
+.printimage,.backgroundimage,.printimage1,.backgroundimage1,.printimage2,.backgroundimage2,.printimage3,.backgroundimage3{
     position: relative;
     height: 35vh;
     aspect-ratio: 3/4;
@@ -46,14 +55,50 @@
 }
 .printimage{
     top:67vh;
-    right:-18vw;
+    right:-22vw;
     animation: robotimage 1s ;
+}
+.printimage1{
+    top:-10vh;
+    right:25vw;
+    animation: robotimage1 1s 0.5s both;
+}
+.printimage2{
+    top:-35vh;
+    right:-18vw;
+    animation: robotimage2 1s 1s both;
+}
+.printimage3{
+    top:-120vh;
+    right:28vw;
+    animation: robotimage3 1s 1.5s both;
 }
 .backgroundimage{
     top:33vh;
-    right:-46vw;
-    background-color: aqua;
+    right:-52vw;
+    background-color: rgba(0, 0, 0, 0.6);
     animation: robotimageback 1s ;
+    z-index: 1;
+}
+.backgroundimage1{
+    top:-43.5vh;
+    right:-5vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: robotimageback1 1s 0.5s both;
+    z-index: 1;
+}
+.backgroundimage2{
+    top:-68.5vh;
+    right:-46vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: robotimageback2 1s 1s both;
+    z-index: 1;
+}
+.backgroundimage3{
+    top:-153vh;
+    right:0vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: robotimageback3 1s 1.5s both;
     z-index: 1;
 }
 .robotimage{
@@ -62,7 +107,8 @@
     height: 35vh;
     left:-18vw;
 }
-.h1titl,.h1titl2 {
+.h1titl{
+    font-family: 'Zen Maru Gothic' , sans-serif;
     text-align: center;
     position: relative;
     left: 0vw;
@@ -74,6 +120,7 @@
 }
 
 .h2move,.h2wait{
+    font-family: 'Zen Maru Gothic' , sans-serif;
     font-size: 4vh;
     position: relative;
     top: 100vh;
@@ -89,6 +136,7 @@
 }
 
 .text1appeare,.text2appeare,.text3appeare{
+    font-family: 'Zen Maru Gothic' , sans-serif;
     text-align: center;
     line-height: 1.5;
     position: relative;
@@ -99,7 +147,6 @@
     text-underline-offset: -20%;
     text-decoration: underline rgba(255, 98, 19, 0.7) solid 40%;
     animation: subtitl 1s ease-out  forwards;
-    text-shadow: 0.1em 0.1em rgb(90, 74, 56);
 }
 .text1appeare{
     top:90vh;
@@ -112,11 +159,13 @@
     font-size: 2vh;
     position: relative;
     word-break: break-all;
-    width: 40vw;
-    height: 50vh;
-    left:3vw;
+    width: 70vw;
+    height: 30vh;
+    left:15vw;
+    top:-140vh;
 }
 .text1{
+
     position: relative;
     top: 90vh;
     min-height: 20vh;
@@ -145,8 +194,8 @@
 }
 
 @keyframes titl {
-    from{top: 70vh; color: rgba(255, 85, 0, 0.007);}
-    to{top: 65vh; color: #F50;}
+    from{top: 70vh; color: rgba(255, 85, 0, 0.007);text-shadow: 0.05em 0.05em 0 rgba(255, 255, 255, 0);}
+    to{top: 65vh; color: #F50;text-shadow: 0.05em 0.05em 0 rgb(255, 255, 255);}
 }
 
 @keyframes subtitl{
@@ -171,12 +220,46 @@
     to{opacity: 1.0; top:90vh;}
 }
 @keyframes robotimage {
-    from{rotate:40deg;right:-10vw;}
+    from{rotate:40deg;right:-14vw;}
     80%{rotate:1deg;}
-    to{rotate: 0deg;right:-18vw;}
+    to{rotate: 0deg;right:-22vw;}
 }
 @keyframes robotimageback {
-    from{rotate:40deg;right:-38vw;}
+    from{rotate:40deg;right:-44vw;}
     80%{rotate:1deg;}
-    to{rotate: 0deg;right:-46vw;}
+    to{rotate: 0deg;right:-52vw;}
+}
+@keyframes robotimage2 {
+    from{opacity:0.0;rotate:-40deg;right:-10vw;}
+    80%{rotate:-1deg;}
+    to{opacity: 1.0;rotate: 0deg;right:-18vw;}
+}
+@keyframes robotimageback2 {
+    from{opacity: 0.0;rotate:-40deg;right:-38vw;}
+    80%{rotate:-1deg;}
+    to{opacity: 1.0;rotate: 0deg;right:-46vw;}
+}
+@keyframes robotimage1 {
+    from{opacity: 0.0;rotate:40deg;right:17vw;}
+    80%{rotate:1deg;}
+    to{opacity: 1.0;rotate: 0deg;right:25vw;}
+}
+@keyframes robotimageback1 {
+    from{opacity: 0.0;rotate:40deg;right:-13vw;}
+    80%{rotate:1deg;}
+    to{opacity: 1.0;rotate: 0deg;right:-5vw;}
+}
+@keyframes robotimage3 {
+    from{opacity: 0.0;rotate:40deg;right:20vw;}
+    80%{rotate:1deg;}
+    to{opacity: 1.0;rotate: 0deg;right:28vw;}
+}
+@keyframes robotimageback3 {
+    from{opacity: 0.0;rotate:40deg;right:-8vw;}
+    80%{rotate:1deg;}
+    to{opacity: 1.0;rotate: 0deg;right:0vw;}
+}
+@keyframes filterappeare {
+    from{opacity: 0.0;}
+    to{opacity: 0.5;}
 }
