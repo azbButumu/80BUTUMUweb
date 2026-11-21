@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&family=Zen+Maru+Gothic&display=swap');
-.about{
-    position: relative;
-    top:0vh;
-    right:0vw;
-    left:0vw;
+.aboutfirst{
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    animation: aboutfirst 4s ;
 }
 .image,.fadeImage,.whitefilter,.filterappearence{
     position: fixed;
@@ -49,57 +50,29 @@
 }
 .printimage,.backgroundimage,.printimage1,.backgroundimage1,.printimage2,.backgroundimage2,.printimage3,.backgroundimage3{
     position: relative;
-    height: 35vh;
+    height: 32vh;
     aspect-ratio: 3/4;
     z-index: 2;
 }
 .printimage{
-    top:67vh;
-    right:-22vw;
+    top:60vh;
+    right:2vw;
     animation: robotimage 1s ;
 }
 .printimage1{
-    top:-10vh;
-    right:25vw;
+    top:60vh;
+    right:0vw;
     animation: robotimage1 1s 0.5s both;
 }
 .printimage2{
-    top:-35vh;
-    right:-18vw;
+    top:60vh;
+    right:2vw;
     animation: robotimage2 1s 1s both;
 }
 .printimage3{
-    top:-120vh;
-    right:28vw;
+    top:60vh;
+    right:-2vw;
     animation: robotimage3 1s 1.5s both;
-}
-.backgroundimage{
-    top:33vh;
-    right:-52vw;
-    background-color: rgba(0, 0, 0, 0.6);
-    animation: robotimageback 1s ;
-    z-index: 1;
-}
-.backgroundimage1{
-    top:-43.5vh;
-    right:-5vw;
-    background-color: rgba(0, 0, 0, 0.6);
-    animation: robotimageback1 1s 0.5s both;
-    z-index: 1;
-}
-.backgroundimage2{
-    top:-68.5vh;
-    right:-46vw;
-    background-color: rgba(0, 0, 0, 0.6);
-    animation: robotimageback2 1s 1s both;
-    z-index: 1;
-}
-.backgroundimage3{
-    top:-153vh;
-    right:0vw;
-    background-color: rgba(0, 0, 0, 0.6);
-    animation: robotimageback3 1s 1.5s both;
-    z-index: 1;
 }
 .robotimage{
     top:20vh;
@@ -162,7 +135,7 @@
     width: 70vw;
     height: 30vh;
     left:15vw;
-    top:-140vh;
+    top:70vh;
 }
 .text1{
 
@@ -184,6 +157,10 @@
 .backh2move{
     animation: backh2m 1s ease-out forwards;
     opacity: 0.4;
+}
+@keyframes aboutfirst {
+    from{}
+    to{}
 }
 @keyframes disappeare {
     from{opacity: 0.0;}
@@ -220,44 +197,24 @@
     to{opacity: 1.0; top:90vh;}
 }
 @keyframes robotimage {
-    from{rotate:40deg;right:-14vw;}
+    from{rotate:1deg;right:-8vw;}
     80%{rotate:1deg;}
-    to{rotate: 0deg;right:-22vw;}
-}
-@keyframes robotimageback {
-    from{rotate:40deg;right:-44vw;}
-    80%{rotate:1deg;}
-    to{rotate: 0deg;right:-52vw;}
+    to{rotate: 0deg;right:2vw;}
 }
 @keyframes robotimage2 {
-    from{opacity:0.0;rotate:-40deg;right:-10vw;}
+    from{opacity:0.0;rotate:1deg;right:-8vw;}
     80%{rotate:-1deg;}
-    to{opacity: 1.0;rotate: 0deg;right:-18vw;}
-}
-@keyframes robotimageback2 {
-    from{opacity: 0.0;rotate:-40deg;right:-38vw;}
-    80%{rotate:-1deg;}
-    to{opacity: 1.0;rotate: 0deg;right:-46vw;}
+    to{opacity: 1.0;rotate: 0deg;right:2vw;}
 }
 @keyframes robotimage1 {
-    from{opacity: 0.0;rotate:40deg;right:17vw;}
+    from{opacity: 0.0;rotate:1deg;right:-7vw;}
     80%{rotate:1deg;}
-    to{opacity: 1.0;rotate: 0deg;right:25vw;}
-}
-@keyframes robotimageback1 {
-    from{opacity: 0.0;rotate:40deg;right:-13vw;}
-    80%{rotate:1deg;}
-    to{opacity: 1.0;rotate: 0deg;right:-5vw;}
+    to{opacity: 1.0;rotate: 0deg;right:-2vw;}
 }
 @keyframes robotimage3 {
-    from{opacity: 0.0;rotate:40deg;right:20vw;}
+    from{opacity: 0.0;rotate:1deg;right:-5vw;}
     80%{rotate:1deg;}
-    to{opacity: 1.0;rotate: 0deg;right:28vw;}
-}
-@keyframes robotimageback3 {
-    from{opacity: 0.0;rotate:40deg;right:-8vw;}
-    80%{rotate:1deg;}
-    to{opacity: 1.0;rotate: 0deg;right:0vw;}
+    to{opacity: 1.0;rotate: 0deg;right:-2vw;}
 }
 @keyframes filterappeare {
     from{opacity: 0.0;}

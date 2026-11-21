@@ -1,9 +1,13 @@
 import './About.css'
 import { useInView } from 'react-intersection-observer';
 import { abouttext } from '../assets/abouttext'
+import { useState } from 'react';
 export default function About() {
 
- 
+  const [first, firsttri] = useState(false);
+var id= setTimeout(()=>{
+  firsttri(true);
+},4000);
   const {ref:ref ,inView:inView} = useInView({
       triggerOnce:true,
       rootMargin:'-80% 0px 0% 0px',
@@ -17,7 +21,7 @@ export default function About() {
   });
   console.log(inView);
   return (
-    <div className='about'>
+    <div className={first? 'about':'aboutfirst'}>
       <div className={inViewre ? 'image':'fadeImage' }>
            <img alt="画像" src = "image1.jpeg" className='imageA'></img>
            <img alt="仮画像" src = "IMG_2014.jpeg" className='imageB'></img>
@@ -35,10 +39,10 @@ export default function About() {
 
            <div className={inView2 ? 'text2appeare':'' }>
            {inView2 && (<>
-           <img  src = "image1.jpeg" className='printimage' ></img><div className='backgroundimage'></div>
-           <img  src = "image1.jpeg" className='printimage1' ></img><div className='backgroundimage1'></div>
-           <img  src = "image1.jpeg" className='printimage2' ></img><div className='backgroundimage2'></div>
-           <img  src = "image1.jpeg" className='printimage3' ></img><div className='backgroundimage3'></div>
+           <img  src = "IMG_2014.jpeg" className='printimage' ></img>
+           <img  src = "image1.jpeg" className='printimage1' ></img>
+           <img  src = "image1.jpeg" className='printimage2' ></img>
+           <img  src = "image1.jpeg" className='printimage3' ></img>
            <p className='text2'>{ abouttext.text2 }</p>
            </>)}
            </div>
