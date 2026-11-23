@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Room1 from './pages/Room1.jsx'
 import Room2 from './pages/Room2'
 import About from './pages/About'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   
