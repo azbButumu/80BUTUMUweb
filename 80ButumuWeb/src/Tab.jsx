@@ -4,8 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { PATH } from './assets/path.js';
 import { motion } from 'framer-motion';
 
-import Icon from '../public/Icon.png';
-import R1 from './pages/Room1.jsx';
 
 export default function Tab() {
 
@@ -18,23 +16,23 @@ export default function Tab() {
   }
 
   const Home = () => {
-    navigation('/Home.jsx');
+    navigation(PATH.HOME);
     setmenu(false);
   }
 
   const Room1 = () => {
-    navigation('/Room1.jsx');
+    navigation(PATH.ROOM1);
 
     setmenu(false);
   }
 
   const Room2 = () => {
-    navigation('/Room2.jsx');
+    navigation(PATH.ROOM2);
     setmenu(false);
   }
 
   const About = () => {
-    navigation('/About.jsx');
+    navigation(PATH.ABOUT);
     setmenu(false);
   }
 

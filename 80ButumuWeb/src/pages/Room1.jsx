@@ -1,6 +1,4 @@
-
 import './Room1.css'
-
 import { useState } from "react"
 import NavMap from "../tools/NavMap"
 
