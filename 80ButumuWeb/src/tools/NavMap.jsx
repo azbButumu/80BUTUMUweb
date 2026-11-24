@@ -15,33 +15,35 @@ export default function NavMap({PropsNav}) {
   return (
     <div className={MapFlag ? "NavMap Flaged" : "NavMap"}>
       <div className='Map'>
-        <h2>ROOM350 MAP</h2>
-        <div id='t0'>
-          <div/>
-        </div>
-        <div id='t1'>
-          <div className={PropsNav === 1 ? "right" : PropsNav === 2 ? "left" : ""} />  
-        </div>
-        <div id='t2'>
-          <div className={PropsNav === 3 ? "right" : PropsNav === 4 ? "left" : ""} />  
-        </div>
-        <div id='t3'>
-          <div className={PropsNav === 8 ? "right" : PropsNav === 7 ? "left" : ""} />  
-        </div>
-        <div id='t4'>
-          <div className={PropsNav === 6 ? "right" : PropsNav === 5 ? "left" : ""} />  
-        </div>
-        <div id='t5'>
-          <div className={PropsNav === 9 ? "right" : PropsNav === 10 ? "left" : ""} />  
-        </div>
-        <div id='t6'>
-          <div className={PropsNav === 11 ? "all" : ""} />  
-        </div>
-        <div id='t7'>
-          <div className={PropsNav === 11 ? "all" : ""} />  
-        </div>
-        <div id='t8'>
-          <div className={PropsNav === 11 ? "all" : ""} />  
+        <div className='MapClipPath'>
+          <h2>ROOM350 MAP</h2>
+          <div id='t0'>
+            <div/>
+          </div>
+          <div id='t1'>
+            <div className={PropsNav === 1 ? "right" : PropsNav === 2 ? "left" : ""} />  
+          </div>
+          <div id='t2'>
+            <div className={PropsNav === 3 ? "right" : PropsNav === 4 ? "left" : ""} />  
+          </div>
+          <div id='t3'>
+            <div className={PropsNav === 8 ? "right" : PropsNav === 7 ? "left" : ""} />  
+          </div>
+          <div id='t4'>
+            <div className={PropsNav === 6 ? "right" : PropsNav === 5 ? "left" : ""} />  
+          </div>
+          <div id='t5'>
+            <div className={PropsNav === 9 ? "right" : PropsNav === 10 ? "left" : ""} />  
+          </div>
+          <div id='t6'>
+            <div className={PropsNav === 11 ? "all" : ""} />  
+          </div>
+          <div id='t7'>
+            <div className={PropsNav === 11 ? "all" : ""} />  
+          </div>
+          <div id='t8'>
+            <div className={PropsNav === 11 ? "all" : ""} />  
+          </div>
         </div>
       </div>
       <div className='Number'>

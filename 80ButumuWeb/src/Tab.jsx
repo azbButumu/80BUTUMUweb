@@ -4,8 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { PATH } from './assets/path.js';
 import { motion } from 'framer-motion';
 
-import Icon from '../public/Icon.png';
-import R1 from './pages/Room1.jsx';
 
 export default function Tab() {
 
@@ -18,23 +16,28 @@ export default function Tab() {
   }
 
   const Home = () => {
-    navigation('/Home.jsx');
+    navigation(PATH.HOME);
     setmenu(false);
   }
 
   const Room1 = () => {
-    navigation('/Room1.jsx');
+    navigation(PATH.ROOM1);
 
     setmenu(false);
   }
 
   const Room2 = () => {
-    navigation('/Room2.jsx');
+    navigation(PATH.ROOM2);
     setmenu(false);
   }
 
   const About = () => {
-    navigation('/About.jsx');
+    navigation(PATH.ABOUT);
+    setmenu(false);
+  }
+
+  const Product = () => {
+    navigation(PATH.PRODUCT);
     setmenu(false);
   }
 
@@ -81,6 +84,14 @@ export default function Tab() {
             onClick={About}>
               <h3>About</h3>
               <p>物理部展とは</p>
+            </motion.li>
+            <motion.li
+            initial={{x:30, opacity:0}}
+            whileInView={{x:0, opacity:1, transition:{duration:0.3, delay:0.7}}}
+            transition={{duration:0, delay:0}}
+            onClick={Product}>
+              <h3>Product</h3>
+              <p>作品紹介</p>
             </motion.li>
         </ul>
     </main>
