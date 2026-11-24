@@ -1,19 +1,15 @@
 import './Room1.css'
-import { useState } from "react"
-import NavMap from "../tools/NavMap"
+import TextEffect from "../tools/TextEffect"
 
 export default function Room1() {
 
-  const [test,settest] = useState(1); 
-
-  const map = () => {
-    settest(test + 1)
-  }
-
   return (
-    <div>
-      <h2 onClick={map}>aaaaa</h2>
-      <NavMap PropsNav={test}/>
+    <div className='Room1'>
+      <div className='PopUp'>
+        <TextEffect PopText={"Room350"} PopColor={"#ff5500"}/>
+      </div>
+      <div className='Main'>
+      </div>
     </div>
   )
 }

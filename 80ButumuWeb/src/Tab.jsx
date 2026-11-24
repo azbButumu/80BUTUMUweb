@@ -36,6 +36,11 @@ export default function Tab() {
     setmenu(false);
   }
 
+  const Product = () => {
+    navigation(PATH.PRODUCT);
+    setmenu(false);
+  }
+
   return (
     <main className='Tab'>
         <div className='Top'>
@@ -79,6 +84,14 @@ export default function Tab() {
             onClick={About}>
               <h3>About</h3>
               <p>物理部展とは</p>
+            </motion.li>
+            <motion.li
+            initial={{x:30, opacity:0}}
+            whileInView={{x:0, opacity:1, transition:{duration:0.3, delay:0.7}}}
+            transition={{duration:0, delay:0}}
+            onClick={Product}>
+              <h3>Product</h3>
+              <p>作品紹介</p>
             </motion.li>
         </ul>
     </main>

@@ -1,0 +1,27 @@
+.TextEffect {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.TextEffect h2 {
+    font-size: 15vh;
+    margin: 10px;
+    font-family: league;
+    color: #fff;
+    text-align: center;
+    display: block;
+    z-index: 3;
+}
+
+.TextEffect #SubTxt {
+    opacity: 0.8;
+}
+
