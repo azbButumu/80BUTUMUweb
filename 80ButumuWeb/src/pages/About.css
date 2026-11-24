@@ -51,28 +51,25 @@
 .printimage,.backgroundimage,.printimage1,.backgroundimage1,.printimage2,.backgroundimage2,.printimage3,.backgroundimage3{
     position: relative;
     height: 32vh;
-    aspect-ratio: 3/4;
     z-index: 2;
 }
 .printimage{
+    aspect-ratio: 3/4;
     top:60vh;
     right:2vw;
     animation: robotimage 1s ;
 }
 .printimage1{
+    aspect-ratio: 3/4;
     top:60vh;
     right:0vw;
     animation: robotimage1 1s 0.5s both;
 }
 .printimage2{
+    aspect-ratio: 4/3;
     top:60vh;
-    right:2vw;
+    left:0vw;
     animation: robotimage2 1s 1s both;
-}
-.printimage3{
-    top:60vh;
-    right:-2vw;
-    animation: robotimage3 1s 1.5s both;
 }
 .robotimage{
     top:20vh;
@@ -108,7 +105,7 @@
     animation: titlh2 1s ease-out forwards;
 }
 
-.text1appeare,.text2appeare,.text3appeare{
+.text1appeare,.text2appeare,.text3appeare,.slidertext,.titl2h1,.text7{
     font-family: 'Zen Maru Gothic' , sans-serif;
     text-align: center;
     line-height: 1.5;
@@ -118,8 +115,10 @@
     font-weight: 700;
     text-decoration-skip-ink: none;
     text-underline-offset: -20%;
-    text-decoration: underline rgba(255, 98, 19, 0.7) solid 40%;
     animation: subtitl 1s ease-out  forwards;
+}
+.text1appeare,.text2appeare,.text3appeare,.slidertext{
+    text-decoration: underline rgba(255, 98, 19, 0.7) solid 40%;
 }
 .text1appeare{
     top:90vh;
@@ -135,7 +134,26 @@
     width: 70vw;
     height: 30vh;
     left:15vw;
-    top:70vh;
+    top:120vh;
+}
+.titl2h1hidden,.text7hidden{
+    opacity: 0.0;
+    height: 100vh;
+}
+.titl2h1{
+    text-decoration: underline rgba(255, 239, 19, 0.7) solid 40%;
+    top: 50vh;
+    font-size: 4.5vh;
+    animation: subtitl 2s forwards;
+    height: 100vh;
+}
+.text7{
+    top:-50vh;
+    width: 70vw;
+    right:-15vw;
+    text-decoration: underline rgba(255, 239, 19, 0.7) solid 40%;
+    animation: subtitl 2s 1s both;
+
 }
 .text1{
 
@@ -157,6 +175,16 @@
 .backh2move{
     animation: backh2m 1s ease-out forwards;
     opacity: 0.4;
+}
+.slider{
+    width:60vw;
+    right:-30vw;
+    top:30vh;
+    animation: sliderimage 1s 2s both;
+}
+.slider1{
+    width: 60vw;
+    aspect-ratio: 3/4;
 }
 @keyframes aboutfirst {
     from{}
@@ -202,19 +230,18 @@
     to{rotate: 0deg;right:2vw;}
 }
 @keyframes robotimage2 {
-    from{opacity:0.0;rotate:1deg;right:-8vw;}
+    from{opacity:0.0;rotate:1deg;left:3vw;}
     80%{rotate:-1deg;}
-    to{opacity: 1.0;rotate: 0deg;right:2vw;}
+    to{opacity: 1.0;rotate: 0deg;left:-7vw;}
 }
 @keyframes robotimage1 {
-    from{opacity: 0.0;rotate:1deg;right:-7vw;}
+    from{opacity: 0.0;rotate:1deg;left:-3vw;}
     80%{rotate:1deg;}
-    to{opacity: 1.0;rotate: 0deg;right:-2vw;}
+    to{opacity: 1.0;rotate: 0deg;left:0vw;}
 }
-@keyframes robotimage3 {
-    from{opacity: 0.0;rotate:1deg;right:-5vw;}
-    80%{rotate:1deg;}
-    to{opacity: 1.0;rotate: 0deg;right:-2vw;}
+@keyframes sliderimage {
+    from{opacity: 0.0}
+    to{opacity: 1.0}
 }
 @keyframes filterappeare {
     from{opacity: 0.0;}
