@@ -9,6 +9,10 @@ export default function About() {
   const [first, firsttri] = useState(false);
 var id= setTimeout(()=>{
   firsttri(true);
+},2500);
+  const [first2, firsttri2] = useState(false);
+var id= setTimeout(()=>{
+  firsttri2(true);
 },1000);
   const {ref:ref ,inView:inView} = useInView({
       triggerOnce:true,
@@ -28,7 +32,7 @@ var id= setTimeout(()=>{
   console.log(inView);
   return (
     <div className={first? 'about':'aboutfirst'}>
-      <div className={inViewre ? 'image':'fadeImage' }>
+      <div className={inViewre ? 'image':first? 'fadeImage':'firstimage' }>
            <img alt="画像" src = "image1.jpeg" className='imageA'></img>
            <img alt="仮画像" src = "IMG_2014.jpeg" className='imageB'></img>
            <img alt="画像" src = "image1.jpeg" className='imageC'></img>
@@ -36,6 +40,7 @@ var id= setTimeout(()=>{
            <div className={inViewre ? '':'whitefilter'} ></div>
           </div>
           <h1 ref={refre} className='h1titl'>物理部無線班</h1>
+          {!first2 && <div className='firstbox'></div>}
            <h2 className={inView ? 'h2move':'h2wait' }>物理部無線班とは</h2>{inView&&<div className={inView ? 'backh2move':'backh2' }></div>}
            <div ref={ref} className={inView ? 'text1appeare':'text1' }>
            {inView && (<>

@@ -4,7 +4,58 @@
     top:0;
     right:0;
     left:0;
-    animation: aboutfirst 4s ;
+    bottom:0;
+    animation: aboutfirst 4s both;
+}
+/*
+.firstclip,.firstclip1,.firstclip2,.firstclip3{
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+}
+.firstclip{
+    top: 0;
+    animation: firstclip 2.5s both;
+    width: 100vw;
+}
+.firstclip1{
+    bottom: 0;
+    animation: firstclip 2.5s both;
+    width: 100vw;
+}
+.firstclip2{
+    top: 0;
+    right: 0;
+    animation: firstclip1 2.5s both;
+    height: 100vh;
+}
+.firstclip3{
+    top: 0;
+    left: 0;
+    animation: firstclip1 2.5s both;
+    height: 100vh;
+}
+@keyframes firstclip {
+    from{height:50vh; opacity: 1.0;}
+    25%{height:50vh; opacity: 1.0;}
+    26%{height: 20vh; opacity: 0.0;}
+    55%{height:20vh;}
+    to{height:0vh}
+}
+@keyframes firstclip1 {
+    from{width:50vw; opacity: 1.0;}
+    25%{width:50vw; opacity: 1.0;}
+    26%{width: 20vw; opacity: 0.0;}
+    55%{width:20vw;}
+    to{width:0vw;}
+}*/
+.firstbox{
+    position: fixed;
+    top:82vh;
+    height: 40vh;
+    width: 100vw;
+    background-color: white;
+    z-index: 10;
 }
 .image,.fadeImage,.whitefilter,.filterappearence{
     position: fixed;
@@ -84,9 +135,10 @@
     left: 0vw;
     right: 0vw;
     z-index: 3;
-    animation: titl 1s 1s ease-out both;
+    animation: titl 1s 1s both;
     font-weight: bold;
     font-size: 6vh;
+    overflow: hidden;
 }
 
 .h2move,.h2wait{
@@ -187,8 +239,8 @@
     aspect-ratio: 3/4;
 }
 @keyframes aboutfirst {
-    from{}
-    to{}
+    from{scale: 40%;}
+    to{scale: 100%;}
 }
 @keyframes disappeare {
     from{opacity: 0.0;}
@@ -199,8 +251,8 @@
 }
 
 @keyframes titl {
-    from{top: 70vh; color: rgba(255, 85, 0, 0.007);text-shadow: 0.05em 0.05em 0 rgba(255, 255, 255, 0);}
-    to{top: 65vh; color: #F50;text-shadow: 0.05em 0.05em 0 rgb(255, 255, 255);}
+    from{top: 90vh; color: rgb(255, 85, 0);text-shadow: 0.05em 0.05em 0 rgb(255, 255, 255); font-style: 0%;}
+    to{top: 65vh; color: #F50;text-shadow: 0.05em 0.05em 0 rgb(255, 255, 255); font-style: 100%;}
 }
 
 @keyframes subtitl{
