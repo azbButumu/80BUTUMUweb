@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { abouttext } from '../assets/abouttext'
 import { useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { motion } from 'framer-motion'
 export default function About() {
 
   const [first, firsttri] = useState(false);
@@ -31,14 +32,22 @@ var id= setTimeout(()=>{
   });
   console.log(inView);
   return (
-    <div className={first? 'about':'aboutfirst'}>
-      <div className={inViewre ? 'image':first? 'fadeImage':'firstimage' }>
+    <>
+    <motion.div 
+      className={first? 'about':'aboutfirst'}
+      initial={!first&&{clipPath: 'inset(-10% 100% 0 0)'}}
+      animate={!first&&{clipPath: 'inset(-10% 0% 0 0)'}}
+      transition={!first&&{duration: 0.5,delay: 0.3,ease: 'easeOut'}}
+      style={!first&&{top: '-10vh'}}
+      >
+      <div className={inViewre ? first?'image':'firstimage':'fadeImage' }>
            <img alt="画像" src = "image1.jpeg" className='imageA'></img>
            <img alt="仮画像" src = "IMG_2014.jpeg" className='imageB'></img>
            <img alt="画像" src = "image1.jpeg" className='imageC'></img>
            <img alt="仮画像" src = "IMG_2014.jpeg" className='imageD'></img>
            <div className={inViewre ? '':'whitefilter'} ></div>
           </div>
+          {!first &&<h1 className='abouttitl'>ABOUT</h1>}
           <h1 ref={refre} className='h1titl'>物理部無線班</h1>
           {!first2 && <div className='firstbox'></div>}
            <h2 className={inView ? 'h2move':'h2wait' }>物理部無線班とは</h2>{inView&&<div className={inView ? 'backh2move':'backh2' }></div>}
@@ -79,7 +88,7 @@ var id= setTimeout(()=>{
 
            <h1 className={inView3 ? 'titl2h1':'titl2h1hidden'}>物理部無線班の活動</h1>
            {inView3 && <p className={inView3 ? 'text7':'text7hidden'}>{abouttext.text7}</p>}
-           </div>
-
+           </motion.div>
+        </>
   )
 }

@@ -1,60 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&family=Zen+Maru+Gothic&display=swap');
 .aboutfirst{
     position: fixed;
-    top:0;
+    top:0vh;
     right:0;
     left:0;
     bottom:0;
-    animation: aboutfirst 4s both;
+    background-color: rgb(255, 85, 0);
 }
-/*
-.firstclip,.firstclip1,.firstclip2,.firstclip3{
-    position: fixed;
-    background-color: rgb(255, 255, 255);
-    z-index: 2;
+.about{
+    height: 1000vh;
+    width:100vw;
 }
-.firstclip{
-    top: 0;
-    animation: firstclip 2.5s both;
-    width: 100vw;
-}
-.firstclip1{
-    bottom: 0;
-    animation: firstclip 2.5s both;
-    width: 100vw;
-}
-.firstclip2{
-    top: 0;
-    right: 0;
-    animation: firstclip1 2.5s both;
-    height: 100vh;
-}
-.firstclip3{
-    top: 0;
-    left: 0;
-    animation: firstclip1 2.5s both;
-    height: 100vh;
-}
-@keyframes firstclip {
-    from{height:50vh; opacity: 1.0;}
-    25%{height:50vh; opacity: 1.0;}
-    26%{height: 20vh; opacity: 0.0;}
-    55%{height:20vh;}
-    to{height:0vh}
-}
-@keyframes firstclip1 {
-    from{width:50vw; opacity: 1.0;}
-    25%{width:50vw; opacity: 1.0;}
-    26%{width: 20vw; opacity: 0.0;}
-    55%{width:20vw;}
-    to{width:0vw;}
-}*/
 .firstbox{
     position: fixed;
     top:82vh;
     height: 40vh;
     width: 100vw;
-    background-color: white;
+    background-color: rgb(255, 85, 0);
     z-index: 10;
 }
 .image,.fadeImage,.whitefilter,.filterappearence{
@@ -64,6 +26,17 @@
     left: 0vw;
     right: 0vw;
     z-index: 1;
+}
+.firstimage{
+    position: fixed;
+    top:-10vh;
+    animation: firstimg 2s both;
+}
+@keyframes firstimg {
+    from{transform: scale(0.4,0.4); opacity: 0.0;top:20vh;left: 30vw;}
+    40%{transform: scale(0.4,0.4); opacity: 0.0;top:20vh;left: 30vw;}
+    60%{transform: scale(0.4,0.4); opacity: 1.0;top:20vh;left: 30vw;}
+    to{transform: scale(1.0,1.0); opacity: 1.0; top:-10vh;left: 0vw;}
 }
 .whitefilter{
     top:10vh;
@@ -135,10 +108,14 @@
     left: 0vw;
     right: 0vw;
     z-index: 3;
-    animation: titl 1s 1s both;
+    animation: titl 2.5s backwards;
     font-weight: bold;
     font-size: 6vh;
     overflow: hidden;
+    top:65vh;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.05em 0.05em 0 #F50; 
+    font-style: 100%;
 }
 
 .h2move,.h2wait{
@@ -179,6 +156,9 @@
     width: 75vw;
     height: 50vh;
 }
+.text2appeare{
+    width: 100vw;
+}
 .text2{
     font-size: 2vh;
     position: relative;
@@ -189,8 +169,9 @@
     top:120vh;
 }
 .titl2h1hidden,.text7hidden{
+    position: relative;
     opacity: 0.0;
-    height: 100vh;
+    top:100vh;
 }
 .titl2h1{
     text-decoration: underline rgba(255, 239, 19, 0.7) solid 40%;
@@ -238,21 +219,25 @@
     width: 60vw;
     aspect-ratio: 3/4;
 }
+.abouttitl{
+    position: fixed;
+}
 @keyframes aboutfirst {
     from{scale: 40%;}
     to{scale: 100%;}
 }
 @keyframes disappeare {
     from{opacity: 0.0;}
-    10%{opacity: 0.8;}
-    30%{opacity: 0.8;}
+    10%{opacity: 1.0;}
+    30%{opacity: 1.0;}
     35%{opacity: 0.0;}
     to{opacity: 0.0;}
 }
 
 @keyframes titl {
-    from{top: 90vh; color: rgb(255, 85, 0);text-shadow: 0.05em 0.05em 0 rgb(255, 255, 255); font-style: 0%;}
-    to{top: 65vh; color: #F50;text-shadow: 0.05em 0.05em 0 rgb(255, 255, 255); font-style: 100%;}
+    from{top: 100vh; color: rgb(255, 255, 255);text-shadow: 0.05em 0.05em 0 rgb(255, 0, 0); font-style: 0%;}
+    40%{top: 75vh; color: rgb(255, 255, 255);text-shadow: 0.05em 0.05em 0 rgb(255, 0, 0); font-style: 100%;}
+    to{top: 75vh; color: rgb(255, 255, 255);text-shadow: 0.05em 0.05em 0 rgb(255, 0, 0); font-style: 100%;}
 }
 
 @keyframes subtitl{
@@ -277,18 +262,15 @@
     to{opacity: 1.0; top:90vh;}
 }
 @keyframes robotimage {
-    from{rotate:1deg;right:-8vw;}
-    80%{rotate:1deg;}
+    from{right:-8vw;}
     to{rotate: 0deg;right:2vw;}
 }
 @keyframes robotimage2 {
-    from{opacity:0.0;rotate:1deg;left:3vw;}
-    80%{rotate:-1deg;}
+    from{opacity:0.0;left:3vw;}
     to{opacity: 1.0;rotate: 0deg;left:-7vw;}
 }
 @keyframes robotimage1 {
-    from{opacity: 0.0;rotate:1deg;left:-3vw;}
-    80%{rotate:1deg;}
+    from{opacity: 0.0;left:-3vw;}
     to{opacity: 1.0;rotate: 0deg;left:0vw;}
 }
 @keyframes sliderimage {
